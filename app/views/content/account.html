@@ -2,11 +2,12 @@
   <div class="nav-side-menu">
     <div class="brand">My library</div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-    <div class="menu-list">
+    <div class="menu-list" ng-repeat= "items in mylist">
       <ul id="menu-content" class="menu-content collapse out">
-        <li>
+        <li>{{items.title}}</li>
+        <li>{{items.youtube_url}}</li>
+     <!--    <youtube-video video-url="" player="bestPlayer" player-width="'50%'" player-height="'100px'"></youtube-video> -->
 
-        </li>
       </ul>
     </div>
   </div>
@@ -44,8 +45,8 @@
   </div>
 
   <youtube-video video-url="videoUrl" player="bestPlayer" player-width="'100%'" player-height="'300px'"></youtube-video>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="angular-youtube-embed.js"></script>
+  <!-- <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="angular-youtube-embed.js"></script> -->
   <button ng-click="bestPlayer.playVideo()">Play</button>
   <button ng-click="bestPlayer.stopVideo()">Stop</button>
 

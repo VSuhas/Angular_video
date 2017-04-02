@@ -5,9 +5,14 @@ angular.module('videoAssignmentApp')
 
   var vm = this;
   vm.libraryForm = {};
-  vm.addedContent= false;
 
   $scope.videoUrl = 'https://www.youtube.com/watch?v=79DijItQXMM';
+
+
+accountService.getDetails().then(function(response) {
+  $scope.mylist = [];
+  $scope.mylist = response.data;
+})
 
   vm.addVideo = function() {
    var params = {
@@ -22,14 +27,11 @@ angular.module('videoAssignmentApp')
   accountService.saveDetails(params).then(function(response) {
     if (response.status === 201) {
       vm.libraryForm = {};
-      vm.addedContent= true;
+
     } else {
 
     }
-
   })
-
-
 };
 
 $scope.looper = 'VvTvtIeXJ1I';
