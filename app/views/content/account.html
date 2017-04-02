@@ -5,9 +5,8 @@
     <div class="menu-list" ng-repeat= "items in mylist">
       <ul id="menu-content" class="menu-content collapse out">
         <li>{{items.title}}</li>
-        <li>{{items.youtube_url}}</li>
-     <!--    <youtube-video video-url="" player="bestPlayer" player-width="'50%'" player-height="'100px'"></youtube-video> -->
-
+        <!-- <li>{{items.youtube_url}}</li> -->
+        <!-- <youtube-video video-url="https://www.youtube.com/watch?v=79DijItQXMM" player="bestPlayer" player-width="'50%'" player-height="'100px'"></youtube-video> -->
       </ul>
     </div>
   </div>
@@ -45,8 +44,8 @@
   </div>
 
   <youtube-video video-url="videoUrl" player="bestPlayer" player-width="'100%'" player-height="'300px'"></youtube-video>
-  <!-- <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="angular-youtube-embed.js"></script> -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="angular-youtube-embed.js"></script>
   <button ng-click="bestPlayer.playVideo()">Play</button>
   <button ng-click="bestPlayer.stopVideo()">Stop</button>
 

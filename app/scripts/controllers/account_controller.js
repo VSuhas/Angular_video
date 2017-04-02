@@ -9,10 +9,10 @@ angular.module('videoAssignmentApp')
   $scope.videoUrl = 'https://www.youtube.com/watch?v=79DijItQXMM';
 
 
-accountService.getDetails().then(function(response) {
-  $scope.mylist = [];
-  $scope.mylist = response.data;
-})
+  accountService.getDetails().then(function(response) {
+    $scope.mylist = [];
+    $scope.mylist = response.data;
+  })
 
   vm.addVideo = function() {
    var params = {
@@ -31,6 +31,11 @@ accountService.getDetails().then(function(response) {
     } else {
 
     }
+    accountService.getDetails().then(function(response) {
+      $scope.mylist = [];
+      $scope.mylist = response.data;
+    })
+
   })
 };
 
