@@ -1,1 +1,46 @@
-<p> My account page </p>
+<div ng-controller="AccountCtrl as account">
+  <div class="nav-side-menu">
+    <div class="brand">My library</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+      <ul id="menu-content" class="menu-content collapse out">
+        <li>
+
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="block-center mt-xl wd-xl">
+    <div class="panel panel-dark panel-flat">
+      <div class="panel-body">
+        <p class="text-center pv">Add video</p>
+        <form class="form-validate mb-lg"  role="form" name="account.libraryForm" novalidate="" ng-submit="account.addVideo()">
+
+          <div class="form-group has-feedback">
+            <label class="text-muted">Title </label>
+            <input class="form-control" type="text" placeholder="Enter title" autocomplete="off" ng-model="account.libraryForm.title" required/>
+          </div>
+{{account.libraryForm.title}}
+          <div class="form-group has-feedback">
+            <label class="text-muted">URL </label>
+            <input class="form-control" type="text" placeholder="Enter URL" autocomplete="off" ng-model="account.libraryForm.url" required/>
+          </div>
+
+          <div class="form-group has-feedback">
+            <label class="text-muted">Start time </label>
+            <input class="form-control" type="text" placeholder="Enter start time" autocomplete="off" ng-model="account.libraryForm.start_time" required/>
+          </div>
+
+          <div class="form-group has-feedback">
+            <label class="text-muted">End time </label>
+            <input class="form-control" type="text" placeholder="Enter end time" autocomplete="off" ng-model="account.libraryForm.end_time" required/>
+          </div>
+
+          <button class="btn btn-block btn-primary mt-lg" type="submit">Add to Library</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
