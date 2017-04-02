@@ -12,7 +12,6 @@ angular
       function failure (response) {
         return response;
       }
-debugger;
       return SaveDetails.library(params).$promise.then(success,failure);
     }
   };

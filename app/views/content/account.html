@@ -22,7 +22,6 @@
             <label class="text-muted">Title </label>
             <input class="form-control" type="text" placeholder="Enter title" autocomplete="off" ng-model="account.libraryForm.title" required/>
           </div>
-{{account.libraryForm.title}}
           <div class="form-group has-feedback">
             <label class="text-muted">URL </label>
             <input class="form-control" type="text" placeholder="Enter URL" autocomplete="off" ng-model="account.libraryForm.url" required/>
@@ -43,4 +42,11 @@
       </div>
     </div>
   </div>
+
+  <youtube-video video-url="videoUrl" player="bestPlayer" player-width="'100%'" player-height="'300px'"></youtube-video>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="angular-youtube-embed.js"></script>
+  <button ng-click="bestPlayer.playVideo()">Play</button>
+  <button ng-click="bestPlayer.stopVideo()">Stop</button>
+
 </div>
